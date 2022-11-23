@@ -12,9 +12,11 @@ public class MCodeApp
      */
     public static void main(String args[])
     {
+    	
+    	final String file = "codes.txt";
         Scanner in = new Scanner(System.in);
-        MorseMessageDecoder decoder = new  MorseMessageDecoder();
-        MorseMessageEncoder encoder = new  MorseMessageEncoder();
+        MorseMessageDecoder decoder = new  MorseMessageDecoder(file);
+        MorseMessageEncoder encoder = new  MorseMessageEncoder(file);
         String message;
         char choice = ' ';
 
