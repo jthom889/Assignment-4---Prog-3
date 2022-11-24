@@ -1,4 +1,5 @@
 package application;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import model.MorseMessageDecoder;
@@ -9,11 +10,12 @@ public class MCodeApp
 {
     /**
      *  Give a brief description of what main does
+     * @throws FileNotFoundException 
      */
-    public static void main(String args[])
+    public static void main(String args[]) throws FileNotFoundException
     {
     	
-    	final String file = "codes.txt";
+    	final String file = "res/codes.txt";
         Scanner in = new Scanner(System.in);
         MorseMessageDecoder decoder = new  MorseMessageDecoder(file);
         MorseMessageEncoder encoder = new  MorseMessageEncoder(file);
@@ -35,7 +37,7 @@ public class MCodeApp
                     case 'E':
                             System.out.println ("Enter the message you'd like to encode into Morse Code");
                             message = in.nextLine();
-                            //System.out.println (encoder.encodeMessage(message));
+                            System.out.println (encoder.encodeMessage(message));
                     default:   
                 }
             }
