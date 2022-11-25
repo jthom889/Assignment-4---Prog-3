@@ -9,8 +9,11 @@ import model.MorseMessageEncoder;
 public class MCodeApp 
 {
     /**
-     *  Give a brief description of what main does
-     * @throws FileNotFoundException 
+     * this application method runs the decoder 
+     * and encoder. this class also prompts the user 
+     * for their purpose with the program and lets the user 
+     * decode or encode a message
+     * @throws FileNotFoundException if the file cannot be located
      */
     public static void main(String args[]) throws FileNotFoundException
     {
@@ -30,9 +33,11 @@ public class MCodeApp
                 switch (choice)
                 {
                     case 'D':
+                    		//morse for hello world:
+                    		//....   .   .-..   .-..   ---       .--   ---   .-.   .-..   -..
                             System.out.println ("Enter the message you'd like to decode from Morse Code");
                             message = in.nextLine();
-                            //System.out.println (decoder.decodeMessage(message)); 
+                            System.out.println (decoder.decodeMessage(message)); 
                             break;
                     case 'E':
                             System.out.println ("Enter the message you'd like to encode into Morse Code");
